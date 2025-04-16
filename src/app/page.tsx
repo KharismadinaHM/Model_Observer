@@ -22,6 +22,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ChartContainer } from "@/components/ui/chart";
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { Switch } from "@/components/ui/switch";
+import Link from "next/link";
 
 const dummyChartData = [
   { name: 'Day 1', uv: 400, pv: 2400, amt: 2400 },
@@ -134,16 +135,18 @@ export default function Home() {
             <SidebarGroupLabel>Navigation</SidebarGroupLabel>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton isActive>
+                <SidebarMenuButton>
                   <Icons.home className="h-4 w-4" />
                   <span>Dashboard</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton>
-                  <Icons.workflow className="h-4 w-4" />
-                  <span>Models</span>
-                </SidebarMenuButton>
+                <Link href="/models">
+                  <SidebarMenuButton>
+                    <Icons.workflow className="h-4 w-4" />
+                    <span>Models</span>
+                  </SidebarMenuButton>
+                </Link>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton>
