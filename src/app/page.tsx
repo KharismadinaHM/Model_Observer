@@ -1,5 +1,4 @@
 "use client";
-
 import {
   Sidebar,
   SidebarContent,
@@ -23,6 +22,7 @@ import { ChartContainer } from "@/components/ui/chart";
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { Switch } from "@/components/ui/switch";
 import Link from "next/link";
+import {getModelVersion} from "@/services/model-registry";
 
 const dummyChartData = [
   { name: 'Day 1', uv: 400, pv: 2400, amt: 2400 },
@@ -128,6 +128,7 @@ export default function Home() {
               </Button>
             </div>
             <p className="text-sm text-muted-foreground">Monitor and improve your ML models</p>
+            
           </div>
         </SidebarHeader>
         <SidebarContent>
@@ -149,10 +150,12 @@ export default function Home() {
                 </Link>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton>
-                  <Icons.file className="h-4 w-4" />
-                  <span>Data Upload</span>
-                </SidebarMenuButton>
+                <Link href="/data-upload">
+                  <SidebarMenuButton>
+                    <Icons.file className="h-4 w-4" />
+                    <span>Data Upload</span>
+                  </SidebarMenuButton>
+                </Link>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton>
