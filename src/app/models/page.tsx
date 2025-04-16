@@ -16,6 +16,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import Link from "next/link";
 
 const models = [
   {
@@ -44,7 +45,12 @@ const models = [
 export default function ModelsPage() {
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-semibold mb-4">Models</h2>
+      <div className="flex justify-between items-center mb-4">
+        <h2 className="text-2xl font-semibold">Models</h2>
+        <Link href="/" className="text-blue-500 hover:underline">
+          Back to Home
+        </Link>
+      </div>
       <Card>
         <CardHeader>
           <CardTitle>Available Models</CardTitle>
