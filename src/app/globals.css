@@ -15,7 +15,7 @@ body {
     --card-foreground: 225 29.2% 15.9%; /* Dark blue */
     --popover: 0 0% 100%;
     --popover-foreground: 225 29.2% 15.9%; /* Dark blue */
-    --primary: 160 59.1% 49.8%; /* Teal */
+    --primary: 34, 68%, 50%; /* Bronze */
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 225 29.2% 15.9%; /* Dark blue */
@@ -27,7 +27,7 @@ body {
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
-    --ring: 160 59.1% 49.8%; /* Teal */
+    --ring: 34, 68%, 50%; /* Bronze */
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -41,7 +41,7 @@ body {
     --sidebar-accent: 0 0% 96.1%;
     --sidebar-accent-foreground: 225 29.2% 15.9%; /* Dark blue */
     --sidebar-border: 0 0% 89.8%;
-    --sidebar-ring: 160 59.1% 49.8%; /* Teal */
+    --sidebar-ring: 34, 68%, 50%; /* Bronze */
   }
   .dark {
     --background: 225 29.2% 15.9%; /* Dark blue */
@@ -50,7 +50,7 @@ body {
     --card-foreground: 0 0% 96.1%; /* Light gray */
     --popover: 225 29.2% 15.9%; /* Dark blue */
     --popover-foreground: 0 0% 96.1%; /* Light gray */
-    --primary: 160 59.1% 49.8%; /* Teal */
+    --primary: 34, 68%, 50%; /* Bronze */
     --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
@@ -62,7 +62,7 @@ body {
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
-    --ring: 160 59.1% 49.8%; /* Teal */
+    --ring: 34, 68%, 50%; /* Bronze */
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -70,12 +70,12 @@ body {
     --chart-5: 340 75% 55%;
     --sidebar-background: 225 29.2% 15.9%; /* Dark blue */
     --sidebar-foreground: 0 0% 96.1%; /* Light gray */
-    --sidebar-primary: 160 59.1% 49.8%; /* Teal */
+    --sidebar-primary: 34, 68%, 50%; /* Bronze */
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 225 29.2% 15.9%; /* Dark blue */
     --sidebar-accent-foreground: 0 0% 96.1%; /* Light gray */
     --sidebar-border: 0 0% 14.9%;
-    --sidebar-ring: 160 59.1% 49.8%; /* Teal */
+    --sidebar-ring: 34, 68%, 50%; /* Bronze */
   }
 }
 
@@ -87,3 +87,4 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
