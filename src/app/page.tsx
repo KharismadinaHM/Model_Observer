@@ -34,8 +34,9 @@ const dummyChartData = [
   { name: 'Day 7', uv: 349, pv: 4300, amt: 2100 },
 ];
 
-export default function Home() {
+export default async function Home() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const modelVersion = await getModelVersion();
 
   return (
     <SidebarProvider>
@@ -44,6 +45,11 @@ export default function Home() {
           <div className="flex items-center space-x-4">
             <SidebarTrigger className="lg:hidden" />
             <h1 className="text-2xl font-semibold">Model Observer</h1>
+            {modelVersion && (
+              <p className="text-sm text-muted-foreground">
+                Model: {modelVersion.modelName} v{modelVersion.modelVersion}
+              </p>
+            )}
           </div>
           <Switch id="dark-theme" checked={isDarkTheme} onCheckedChange={setIsDarkTheme} />
         </header>
@@ -158,10 +164,12 @@ export default function Home() {
                 </Link>
               </SidebarMenuItem>
               <SidebarMenuItem>
-                <SidebarMenuButton>
-                  <Icons.share className="h-4 w-4" />
-                  <span>Alerting</span>
-                </SidebarMenuButton>
+                <Link href="/alerting">
+                  <SidebarMenuButton>
+                    <Icons.share className="h-4 w-4" />
+                    <span>Alerting</span>
+                  </SidebarMenuButton>
+                </Link>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroup>
