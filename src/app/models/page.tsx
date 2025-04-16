@@ -10,7 +10,6 @@ import {
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -44,10 +43,18 @@ const models = [
 
 export default function ModelsPage() {
   return (
-    <div className="p-6">
-      <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-semibold">Models</h2>
-        <Link href="/" className="text-blue-500 hover:underline">
+    <div className="container mx-auto py-10">
+      <div className="mb-8 flex justify-between items-center">
+        <div>
+          <h1 className="text-3xl font-semibold">Models</h1>
+          <p className="text-muted-foreground">
+            Manage and monitor your machine learning models.
+          </p>
+        </div>
+        <Link
+          href="/"
+          className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+        >
           Back to Home
         </Link>
       </div>
@@ -55,14 +62,14 @@ export default function ModelsPage() {
         <CardHeader>
           <CardTitle>Available Models</CardTitle>
           <CardDescription>
-            List of available machine learning models and their versions.
+            A list of all available machine learning models.
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="p-0">
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead>Name</TableHead>
+                <TableHead className="w-[100px]">Name</TableHead>
                 <TableHead>Version</TableHead>
                 <TableHead>Description</TableHead>
                 <TableHead>Status</TableHead>
@@ -70,8 +77,8 @@ export default function ModelsPage() {
             </TableHeader>
             <TableBody>
               {models.map(model => (
-                <TableRow key={model.id}>
-                  <TableCell>{model.name}</TableCell>
+                <TableRow key={model.id} className="hover:bg-accent">
+                  <TableCell className="font-medium">{model.name}</TableCell>
                   <TableCell>{model.version}</TableCell>
                   <TableCell>{model.description}</TableCell>
                   <TableCell>{model.status}</TableCell>
